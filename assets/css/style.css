@@ -1,0 +1,53 @@
+#logo {
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.logo-con {
+    background-color: #FB9902;
+}
+
+
+.container {
+    width: 1000px;
+    border: 2px solid red;
+}
+
+p {
+    font-size: 25px;
+    opacity: 0.40;
+}
+
+.unfade {
+    opacity: 1;
+    text-align: center;
+    font-size: 22px;
+
+}
+
+.box {
+    border: 2px solid blue;
+    height: 150px;
+    width: 300px;
+
+} 
+
+.box1 {
+ 
+    height: 50px;
+    width: 300px;
+
+}
+
+h3 {
+    padding-left: 0;
+}
+
+.underline{
+    border-bottom: 2px solid black; 
+    width:30px;
+    margin: 0 auto;
+}
