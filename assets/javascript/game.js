@@ -2,7 +2,10 @@
 
         var life = 12;
         var lose = 0;
+        var numblank = 0
         var usedWords = [];
+        var chosenWord = [];
+        var blanksAndSuccesses = [];
         var anime = [
             "naruto",
             "bleach",
@@ -10,8 +13,18 @@
           ];
 
           var word = anime[Math.floor(Math.random() * anime.length)];
+          var theWord = word.split("");
+          numBlank = theWord.length;
 
-          for (var i=0; i < word.length; i++){
+          for (var i = 0; i < numBlank; i++) {
+            blanksAndSuccesses.push("_");
+          }
+
+          console.log(blanksAndSuccesses);
+          console.log(numBlank);
+        
+
+          for (var i=0; i < numBlank; i++){
             var underscore = $("<span>");  
             underscore.addClass("underline underline-" + word[i]);
             underscore.attr("data-letter" , word[i]);
@@ -27,10 +40,8 @@
                     if (userguess === word[j]){
                         $(".underline-" + word[j]).text(word[j]);
                         result = true;
+                        chosenWord.push(userguess);
                     }
-                }
-                if (window.event.keyCode == 116) {
-                    life = life+0
                 }
                 if (result === false){
                     life = life-1;
@@ -39,12 +50,18 @@
                     $(".box").append(userguess);
 
                 }
+
+                var winner = chosenWord.join("");
+                if (winner === word){
+                    alert("you win");
+                }
                 if (life === 0){
                 
                     lose = lose +1;
                     $("h4").text(lose); 
                 }
               };
-    
+              console.log(chosenWord);
+              console.log(word);
           
             })
