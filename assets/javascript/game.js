@@ -3,15 +3,18 @@
         var life = 12;
         var lose = 0;
         var numblank = 0
+        var win = 0 
         var usedWords = [];
         var chosenWord = [];
         var blanksAndSuccesses = [];
+        var currentWordIndex;
         var anime = [
             "naruto",
             "bleach",
             "gto"
           ];
 
+          
           var word = anime[Math.floor(Math.random() * anime.length)];
           var theWord = word.split("");
           numBlank = theWord.length;
@@ -41,6 +44,7 @@
                         $(".underline-" + word[j]).text(word[j]);
                         result = true;
                         chosenWord.push(userguess);
+                        ResetGlobalVariables()
                     }
                 }
                 if (result === false){
@@ -53,14 +57,31 @@
 
                 var winner = chosenWord.join("");
                 if (winner === word){
-                    alert("you win");
+                    win++;
+                    $("h5").text(win);
                 }
                 if (life === 0){
-                
                     lose = lose +1;
                     $("h4").text(lose); 
+                    //document.location.reload();
                 }
               };
+
+         /*   function resetGame(){
+                life = 12 ;
+                word= anime[Math.floor(Math.random() * anime.length)];
+                chosenWord = [];
+                usedWord = [];
+
+                for (var i = 0; i < anime[word].length; i++) {
+                    theWord.push("_");
+
+                    updateDisplay ()
+            }
+        }*/
+
+            
+
               console.log(chosenWord);
               console.log(word);
           
