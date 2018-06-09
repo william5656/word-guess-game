@@ -29,7 +29,10 @@
 
 .container {
     width: 1000px;
-    border: 2px solid red;
+    border: 2px solid #3366ff;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    
 }
 
 p {
@@ -45,7 +48,7 @@ p {
 }
 
 .box {
-    border: 2px solid #D55F5F;
+    border: 2px solid #3366ff;
     height: 150px;
     width: 300px;
 
@@ -80,4 +83,8 @@ h4, h5 {
 
 .guess {
     font-size: 20px;
+}
+
+body {
+    background-image: url("../images/skyanime.jpg")
 }
