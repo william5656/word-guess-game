@@ -14,8 +14,9 @@
             "bleach",
             "gto",
             "rewrite",
-            "dragonball",
-            "gundam"
+            "yugioh",
+            "gundam",
+            "rezero"
           ];
 
           
