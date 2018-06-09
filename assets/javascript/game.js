@@ -4,11 +4,9 @@
         var lose = 0;
         var numblank = 0
         var win = 0 
-        var counter = 0;
-        var counterL = [];        
+        var counter = 0;  
         var usedWords = [];
-        var chosenWord = [];
-        var blanksAndSuccesses = [];
+  
         var anime = [
             "naruto",
             "bleach",
@@ -25,14 +23,10 @@
           numBlank = word.length;
 
 
-          console.log(blanksAndSuccesses);
-          console.log(numBlank);
-        
 
           for (var i=0; i < numBlank; i++){
             var underscore = $("<span>");  
             underscore.addClass("underline underline-" + word[i]);
-            //underscore.attr("data-letter" , word[i]);
               
               $(".box1").append(underscore);
           }   
@@ -50,6 +44,8 @@
                     for(var j=0; j < word.length; j++){ 
                         if (userguess === word[j]){
                         $(".underline-" + word[j]).text(word[j]);
+                        life = life + 1;
+                        $(".life").text(life);
                         console.log("works!");
                         counter++;
                 }
@@ -61,7 +57,7 @@
                     $("h5").text(win);
                     $(".box1").empty();
                     $(".box").empty();
-                    resetGame();
+                    resetGame(); 
                 }
                 if (life === 0){
                     lose = lose +1;
@@ -76,16 +72,17 @@
                     word= anime[Math.floor(Math.random() * anime.length)];
                     theWord = word.split("");
                     numBlank = theWord.length;
-                    chosenWord = [];
                     usedWords = [];
                     counter = 0 
-                    counterL = [];
                     for (var i=0; i < numBlank; i++){
                         var underscore = $("<span>");  
                         underscore.addClass("underline underline-" + word[i]);
                         underscore.attr("data-letter" , word[i]);
                           
                           $(".box1").append(underscore);
+                          $(".life").text(life);
+
+                          
                       } 
                 }
             
