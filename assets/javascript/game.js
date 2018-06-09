@@ -16,7 +16,8 @@
             "rewrite",
             "yugioh",
             "gundam",
-            "rezero"
+            "rezero",
+            "erased"
           ];
 
           
