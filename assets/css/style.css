@@ -5,6 +5,22 @@
     margin-right: auto;
     
 }
+#title {
+    position: relative;
+}
+
+#title2 {
+    position: absolute;
+    bottom:0;
+    left: 38%;
+}
+#logo2 {
+  
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+}
 
 .logo-con {
     background-color: #FB9902;
@@ -29,7 +45,7 @@ p {
 }
 
 .box {
-    border: 2px solid blue;
+    border: 2px solid #D55F5F;
     height: 150px;
     width: 300px;
 
